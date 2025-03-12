@@ -1,0 +1,17 @@
+@import "../../styles.scss";
+
+.field {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url("../../assets/img/game-background.jpg");
+    @include dFlex();
+    @include backgroundImage();
+}
+
+.card-stack {
+    position: relative;
+    >img {
+        position: absolute;
+    }
+}
