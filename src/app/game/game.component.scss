@@ -13,5 +13,38 @@
     position: relative;
     >img {
         position: absolute;
+        height: 200px;
+        width: 130px;
+    }
+    >button {
+        @include position($r: -190px);
+        border-radius: 7px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.pick-card {
+    transform: scale(1.5) translateX(120px) translateY(-170px) rotate(-10deg);
+    animation: pick-card-animation 1s ease-in-out;
+}
+
+.played-cards {
+    @include position($r: 20px);
+    transform: scale(1.5) translateX(120px) translateY(-170px) rotate(-10deg);
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1.1);
+    }
+    30% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.5) translateX(120px) translateY(-170px) rotate(-10deg);
     }
 }

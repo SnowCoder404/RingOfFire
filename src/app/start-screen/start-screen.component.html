@@ -1,6 +1,7 @@
 <div class="start-screen">
-    <img src="./assets/img/background.png" alt="">
-    <div>
+    <h1>Ring of Fire</h1>
+    <img *ngFor="let i of ['ace_1','clubs_1','diamonds_1','hearts_1']" src="./assets/img/cards/{{i}}.png" alt="{{i}}">
+    <div class="start-game">
         <div (click)="this.startGame()">Start Game</div>
     </div>
 </div>

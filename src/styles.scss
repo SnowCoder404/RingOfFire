@@ -2,11 +2,20 @@ body {
     margin: 0;
 }
 
-@mixin dFlex($display: flex, $jf: center, $ai: center, $g: 0) {
+@mixin dFlex($display: flex, $jf: center, $ai: center, $g: 0, $fd: none) {
     display: $display;
     justify-content: $jf;
+    flex-direction: $fd;
     align-items: $ai;
     gap: $g;
+}
+
+@mixin position($t: unset, $r: unset, $l: unset, $b: unset) {
+    position: absolute;
+    top: $t;
+    right: $r;
+    left: $l;
+    bottom: $b;
 }
 
 @mixin backgroundImage() {
