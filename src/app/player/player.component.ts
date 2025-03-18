@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component} from '@angular/core';
+import { CommonModule} from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-player',
@@ -8,9 +8,5 @@ import { Component} from '@angular/core';
   styleUrl: './player.component.scss'
 })
 export class PlayerComponent {
-  players:string[] = [];
-
-  setPlayer(player: string) {
-    this.players.push(player)
-  }
+  @Input() name: string | undefined;
 }

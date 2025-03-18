@@ -1,7 +1,6 @@
 @import "../../styles.scss";
 
 .userlist {
-    @include position($t: 25px, $r: 0px);
     @include dFlex($jf: flex-start, $g: 24px);
     background-color: rgba(0, 0, 0, 0.35);
     padding: 25px;

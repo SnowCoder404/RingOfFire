@@ -1,6 +1,6 @@
-<div *ngFor="let player of players; let i = index" class="userlist" [ngStyle]="{'margin': i * 150 + 'px 0'}">
+<div class="userlist">
     <img src="./assets/img/profile.png" alt="picture">
     <div class="userdata">
-        <span>Name: {{ player }}</span>
+        <span>{{name}}</span>
     </div>
 </div>
