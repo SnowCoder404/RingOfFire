@@ -38,6 +38,10 @@
     @include position($r: 0px);
 }
 
+.game-info {
+    @include position($b: 50px, $r: 220px, $l: 220px);
+}
+
 @keyframes pick-card-animation {
     0% {
         transform: scale(1.1);
