@@ -1,9 +1,12 @@
 {
   "dependencies": {
+    "@angular-devkit/build-angular": "^19.2.5",
     "@angular/animations": "^19.2.4",
     "@angular/cdk": "^19.2.7",
-    "@angular/fire": "github:angular/fire",
+    "@angular/cli": "^19.2.5",
+    "@angular/fire": "^19.0.0",
     "@angular/material": "^19.2.7",
+    "@angular/router": "^19.2.4",
     "angular": "^1.8.3",
     "firebase": "^11.5.0"
   }
