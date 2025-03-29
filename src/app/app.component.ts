@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import { AsyncPipe } from '@angular/common';
+import { Firestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +11,6 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  firestore: Firestore = inject(Firestore);
   title = 'ringoffire';
 }
