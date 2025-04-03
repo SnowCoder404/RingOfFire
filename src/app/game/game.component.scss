@@ -36,10 +36,32 @@
 
 .player-position {
     @include position($r: 0px);
+    z-index: 1;
 }
 
 .game-info {
     @include position($b: 50px, $r: 220px, $l: 220px);
+    @media (max-width: 600px) {
+        @include position($t: unset, $r: 0px, $l: 0px, $b: 0px);
+    }
+}
+
+.add-player-button {
+    position: absolute;
+    bottom: 90px;
+    right: 90px;
+    @media (max-width: 600px) { 
+        @include position($r: 0px, $b: 0px);
+    }
+}
+
+.scroll-container {
+    @include position($t: 0px);
+    @include dFlex($g: 12px);
+    overflow-x: scroll;
+    * {
+        z-index: 1;
+    }
 }
 
 @keyframes pick-card-animation {

@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+.userlist {
+    @include dFlex($fd: column, $g: 14px);
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 8px;
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    width: 66px;
+    >img {
+        height: 30px;
+        width: 30px;
+        border-radius: 32px;
+    }
+}
+
+.userdata {
+    >span {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.player-active {
+    background-color: orange;
+}

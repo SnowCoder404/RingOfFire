@@ -12,10 +12,17 @@
     max-width: 100%;
     @include dFlex($g: 50px);
     @include backgroundImage();
+    @media (max-width: 600px) {
+        gap: 18px;
+    }
     >img {
         height: 150px;
         width: 110px;
         rotate: 150deg;
+        @media (max-width: 600px) {
+            height: 96px;
+            width: 66px;
+        }
         &:hover {
             transform: scale(1.1) translateY(-10px);
         }
