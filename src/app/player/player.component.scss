@@ -1,9 +1,10 @@
 @import "../../styles.scss";
 
 .userlist {
-    @include dFlex($jf: flex-start, $g: 14px);
+    @include dFlex($jf: flex-start, $g: 12px);
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.35);
-    padding: 12px;
+    padding: 6px;
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
     width: 230px;
@@ -19,6 +20,9 @@
         font-size: 22px;
         font-weight: bold;
         color: white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 }
 

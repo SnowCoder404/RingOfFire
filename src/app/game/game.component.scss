@@ -57,10 +57,30 @@
 
 .scroll-container {
     @include position($t: 0px);
-    @include dFlex($g: 12px);
+    @include dFlex($g: 12px,$jf: none);
+    width: 100vw;
     overflow-x: scroll;
     * {
         z-index: 1;
+    }
+}
+
+.game-over {
+    width: 100vw;
+    height: 100vh;
+}
+
+.preloadImage {
+    opacity: 0;
+    z-index: -99999999;
+    height: 0px;
+    width: 0px;
+}
+
+app-player, app-player-mobile {
+    cursor: pointer;
+    &:hover {
+     filter: brightness(0.8);
     }
 }
 

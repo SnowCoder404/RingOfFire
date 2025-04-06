@@ -23,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
     MatDialogActions,
     MatDialogClose,
   ],
+  styleUrl: './add-player-dialog.component.scss',
 })
 export class DialogOverviewExampleDialog {
   player = "";

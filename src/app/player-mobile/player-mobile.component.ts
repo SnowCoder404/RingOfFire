@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PlayerMobileComponent {
   @Input() name: string | undefined;
+  @Input() image: string | undefined;
   @Input() playerActive: boolean = false;
 }

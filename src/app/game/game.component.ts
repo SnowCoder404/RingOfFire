@@ -17,6 +17,7 @@ import { onSnapshot } from 'firebase/firestore';
 import { ActivatedRoute, Params } from '@angular/router';
 import { G, S } from '@angular/cdk/keycodes';
 import { DocumentData } from '@angular/fire/compat/firestore';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
 
 
 @Component({
@@ -27,7 +28,7 @@ import { DocumentData } from '@angular/fire/compat/firestore';
 })
 export class GameComponent implements OnInit {
   public game: Game;
-  
+  gameover = false;
   gameId = ""
   readonly animal = signal('');
   readonly name = model('');
@@ -63,6 +64,7 @@ export class GameComponent implements OnInit {
     if (this.game) {
       this.game.stack = gameData.stack;
       this.game.players = gameData.players;
+      this.game.playersPictures = gameData.playersPictures;
       this.game.playedCards = gameData.playedCards;
       this.game.currentPlayer = gameData.currentPlayer;
       this.game.pickCardAnimation = gameData.pickCardAnimation,
@@ -72,20 +74,21 @@ export class GameComponent implements OnInit {
 
   cardAnimation() {
     if (this.game) {
-      if (!this.game.pickCardAnimation) {
-        this.game.pickCardAnimation = true;
-        this.game.current_card = this.game.stack.pop() || '';
-        this.saveGame();
-        setTimeout(() => {
-          if (this.game) {
-            this.game.playedCards.push(this.game.current_card)
-            this.game.pickCardAnimation = false;
-            this.whichPlayerIsActive();
-          }
-        },1000);
-      }
-    }
-
+      if (this.game.stack.length === 0) {
+        this.gameover = true;
+      } else if (!this.game.pickCardAnimation) {
+          this.game.pickCardAnimation = true;
+          this.game.current_card = this.game.stack.pop() || '';
+          this.saveGame();
+          setTimeout(() => {
+            if (this.game) {
+              this.game.playedCards.push(this.game.current_card)
+              this.game.pickCardAnimation = false;
+              this.whichPlayerIsActive();
+            }
+          },1000);
+        }
+      } 
   }
 
   whichPlayerIsActive() {
@@ -101,6 +104,7 @@ export class GameComponent implements OnInit {
     dialogRef.afterClosed().subscribe((name:string) => {
       if (name && name.length > 0) {
         this.game?.players.push(name);
+        this.game?.playersPictures.push("./assets/img/profile-picture/profile.png");
         this.saveGame();
       }  
     });
@@ -111,5 +115,21 @@ export class GameComponent implements OnInit {
       const gameDocRef = doc(this.firestore, "games", this.gameId);
       updateDoc(gameDocRef, this.game.toJson());
     }
+  }
+
+  editPlayer(playerId: number) {
+    const dialogRef = this.dialog.open(EditPlayerComponent);
+    dialogRef.afterClosed().subscribe((change:string) => {
+      if (change) {
+        if (change === "DELETE") {
+          this.game.players.splice(playerId, 1);        
+          this.game.playersPictures.splice(playerId, 1);        
+        } else {
+          this.game.playersPictures[playerId] = change;        
+
+        }
+        this.saveGame();
+      }
+    });
   }
 }
