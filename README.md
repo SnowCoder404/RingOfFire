@@ -1,4 +1,4 @@
-#🔥 RingOfFire - The Digital Drinking Game
+🔥 RingOfFire - The Digital Drinking Game
 
 Welcome to RingOfFire, the digital version of the popular drinking game!
 This web application lets you and your friends experience the game online — with digital cards, rules, and a synchronized gameplay experience.
