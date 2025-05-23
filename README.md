@@ -1,59 +1,54 @@
-# Ringoffire
+🔥 RingOfFire – The Digital Drinking Game
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Welcome to RingOfFire, the digital version of the popular drinking game!
+This web application lets you and your friends experience the game online — with digital cards, rules, and a synchronized gameplay experience.
 
-## Development server
 
-To start a local development server, run:
+🎮 Game Concept
 
-```bash
+RingOfFire is based on the classic drinking game where players take turns drawing cards and performing the associated actions.
+Each card represents a specific rule or task that keeps the game fun and engaging.
+
+
+🛠️ Technologies
+
+Frontend	Angular 19.2.1
+Styling	SCSS
+Backend	Firebase (for data storage only)
+Language	TypeScript
+
+
+🚀 Features
+
+🎴 Digital playing cards with built-in rules
+
+👥 Multiplayer support for playing together
+
+📱 Responsive design for various devices
+
+🔄 Real-time updates for synchronized gameplay
+
+☁️ Firebase integration for storing game states and user data
+
+
+📦 Installation
+
+1. Clone the repository
+
+git clone https://github.com/SnowCoder404/RingOfFire.git
+
+
+2. Install dependencies
+
+npm install
+
+
+3. Start the development server
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+4. Open the application in your browser
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+http://localhost:4200/
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
