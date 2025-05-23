@@ -1,4 +1,4 @@
-🔥 RingOfFire – The Digital Drinking Game
+#🔥 RingOfFire - The Digital Drinking Game
 
 Welcome to RingOfFire, the digital version of the popular drinking game!
 This web application lets you and your friends experience the game online — with digital cards, rules, and a synchronized gameplay experience.
@@ -29,26 +29,3 @@ Language	TypeScript
 🔄 Real-time updates for synchronized gameplay
 
 ☁️ Firebase integration for storing game states and user data
-
-
-📦 Installation
-
-1. Clone the repository
-
-git clone https://github.com/SnowCoder404/RingOfFire.git
-
-
-2. Install dependencies
-
-npm install
-
-
-3. Start the development server
-
-ng serve
-
-
-4. Open the application in your browser
-
-http://localhost:4200/
-
